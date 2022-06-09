@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Boas Vindas</title>
+</head>
+<body>
+{% if greeting and today %}
+<h3>{{ greeting }} - {{ today }}</h3>
+{% elif greeting and not today %}
+<h3>{{ greeting }}</h3>
+{% elif not greeting and today %}
+<h3>{{ today }}</h3>
+{% else %}
+<h3>Não informada a data nem boas vindas.</h3>
+{% endif %}
+</body>
+</html>
